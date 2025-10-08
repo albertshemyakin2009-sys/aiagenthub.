@@ -1,0 +1,5 @@
+[
+  {"name": "HR Agent", "description": "Помогает создавать резюме"},
+  {"name": "Sales Agent", "description": "Генерирует скрипты продаж"},
+  {"name": "Support Agent", "description": "Автоматизирует ответы клиентам"}
+]
