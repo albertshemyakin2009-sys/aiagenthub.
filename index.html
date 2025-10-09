@@ -1,26 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIAGENTHUB</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIAGENTHUB — Маркетплейс ИИ-агентов</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>🤖 AIAGENTHUB</h1>
-    <nav>
+<header class="site-header">
+  <div class="container header-row">
+    <div class="logo"><span class="logo-ai">AI</span><span class="logo-agent">AGENT</span><span class="logo-hub">HUB</span></div>
+    <nav class="nav" id="nav">
       <a href="index.html">Главная</a>
-      <a href="admin.html">Админ-панель</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О нас</a>
+      <a href="settings.html">Настройки</a>
+      <a href="admin.html" class="nav-admin">Панель</a>
+      <button id="btnLogin" class="btn small ghost">Войти</button>
+      <button class="hamburger" id="hamburger" aria-label="menu">☰</button>
     </nav>
-  </header>
-  <main>
-    <h2>Маркетплейс AI-агентов</h2>
-    <div id="agents"></div>
-  </main>
-  <footer>
-    <p>© 2025 AIAGENTHUB</p>
-  </footer>
-  <script src="app.js"></script>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>Маркетплейс готовых <span class="accent">ИИ‑агентов</span> для бизнеса и людей</h1>
+    <p class="lead">Найдите, протестируйте и внедрите готового AI‑ассистента в ваш бизнес за часы — не месяцы.</p>
+    <div class="hero-ctas">
+      <a class="btn cta" href="catalog.html">Перейти в каталог</a>
+      <a class="btn ghost" href="about.html">Узнать больше</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Быстрый старт</h3>
+      <p>Запуск агента за пару кликов — демо и тестирование в интерфейсе.</p>
+    </div>
+    <div class="feature">
+      <h3>Проверенные продавцы</h3>
+      <p>Модерация и верификация авторов агентов для вашей безопасности.</p>
+    </div>
+    <div class="feature">
+      <h3>Гарантия качества</h3>
+      <p>Поддержка и возврат в тестовый период.</p>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="trust-item"><div class="num">120+</div><div class="label">агентов</div></div>
+    <div class="trust-item"><div class="num">45+</div><div class="label">продавцов</div></div>
+    <div class="trust-item"><div class="num">5k+</div><div class="label">тестовых сессий</div></div>
+  </section>
+
+  <section class="how">
+    <h2>Как это работает</h2>
+    <ol class="steps">
+      <li><strong>Разместите</strong> агента или выберите из каталога.</li>
+      <li><strong>Протестируйте</strong> демо и изучите функционал.</li>
+      <li><strong>Купите / Подписка</strong> — получите доступ и интеграцию.</li>
+    </ol>
+  </section>
+
+  <section class="newsletter">
+    <h3>Будьте в курсе</h3>
+    <p>Подпишитесь и получите подборку лучших демо‑агентов.</p>
+    <form id="subscribeForm"><input id="subEmail" placeholder="Ваш email" /><button class="btn">Подписаться</button></form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-left">© AIAGENTHUB 2025</div>
+    <div class="foot-right"><a href="about.html">О нас</a> · <a href="settings.html">Настройки</a> · <a href="admin.html">Панель</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
