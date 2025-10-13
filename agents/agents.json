@@ -1,17 +1,1 @@
-[
-  {
-    "id": "hr1",
-    "name": "HR-Agent",
-    "description": "Генерирует и улучшает резюме"
-  },
-  {
-    "id": "m1",
-    "name": "MarketingBot",
-    "description": "Генерирует рекламные тексты и стратегии"
-  },
-  {
-    "id": "s1",
-    "name": "StudyHelper",
-    "description": "Учебная поддержка и конспекты"
-  }
-]
+[{"id": "hr1", "name": "HR-Agent", "description": "Генерирует резюме"}]
