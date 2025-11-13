@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Настройки — AIAGENTHUB</title>
+  <title>Запросы и пожелания — AIAGENTHUB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -20,8 +20,8 @@
       <a href="catalog.html" data-i18n="nav_catalog" class="">Каталог</a>
       <a href="about.html" data-i18n="nav_about" class="">О нас</a>
       <a href="support.html" data-i18n="nav_support" class="">Поддержка</a>
-      <a href="requests.html" data-i18n="nav_requests" class="">Запросы</a>
-      <a href="settings.html" data-i18n="nav_settings" class="active">Настройки</a>
+      <a href="requests.html" data-i18n="nav_requests" class="active">Запросы</a>
+      <a href="settings.html" data-i18n="nav_settings" class="">Настройки</a>
       <a href="admin.html" data-i18n="nav_admin" class="">Админ</a>
     </nav>
     <div class="header-right">
@@ -42,8 +42,8 @@
       <a href="catalog.html" data-i18n="nav_catalog" class="">Каталог</a>
       <a href="about.html" data-i18n="nav_about" class="">О нас</a>
       <a href="support.html" data-i18n="nav_support" class="">Поддержка</a>
-      <a href="requests.html" data-i18n="nav_requests" class="">Запросы</a>
-      <a href="settings.html" data-i18n="nav_settings" class="active">Настройки</a>
+      <a href="requests.html" data-i18n="nav_requests" class="active">Запросы</a>
+      <a href="settings.html" data-i18n="nav_settings" class="">Настройки</a>
       <a href="admin.html" data-i18n="nav_admin" class="">Админ</a>
   </nav>
 </header>
@@ -51,63 +51,53 @@
   <main>
     <section class="section fade-in">
       <div class="max-w">
-        <h1 class="page-title" data-i18n="settings_title">Настройки аккаунта (демо)</h1>
-        <p class="page-subtitle" data-i18n="settings_subtitle">
-          Здесь настраиваются базовые параметры профиля, тема интерфейса и предпочтения. В продакшене добавятся биллинг, API-ключи и интеграции.
+        <h1 class="page-title" data-i18n="requests_title">Запросы, пожелания и партнёрства</h1>
+        <p class="page-subtitle" data-i18n="requests_subtitle">
+          Здесь собираем идеи по платформе, заявки на партнёрство и предложения новых агентов. Технические вопросы — через раздел поддержки.
         </p>
         <div class="columns">
           <div class="card">
-            <h3 data-i18n="settings_profile_title">Профиль</h3>
-            <div class="form-grid">
+            <h3 data-i18n="requests_agent_title">Предложить нового агента</h3>
+            <form id="requestAgentForm" class="form-grid">
               <div>
-                <div class="label" data-i18n="settings_name_label">Имя / команда</div>
-                <input class="input" type="text" placeholder="AIAGENTHUB Demo User" />
+                <div class="label">Название / рабочее имя агента</div>
+                <input class="input" type="text" name="agentName" required placeholder="Например, LegalDoc AI" />
               </div>
               <div>
-                <div class="label">Email</div>
-                <input class="input" type="email" placeholder="demo@aiagenthub.io" />
+                <div class="label">Кратко про задачу</div>
+                <textarea class="textarea" name="idea" required
+                  placeholder="Какую проблему решает агент, для кого, какие интеграции нужны."></textarea>
               </div>
-            </div>
-
-            <h3 style="margin-top:10px;" data-i18n="settings_language_title">Язык интерфейса</h3>
-            <div class="form-grid">
-              <select id="languageSelect" class="select">
-                <option value="ru">Русский</option>
-                <option value="en">English</option>
-              </select>
-            </div>
-
-            <h3 style="margin-top:10px;">Тема сайта</h3>
-            <div class="form-grid">
-              <select id="themeSelect" class="select">
-                <option value="original">Оригинальная</option>
-                <option value="light">Светлая</option>
-              </select>
-            </div>
-
-            <h3 style="margin-top:10px;" data-i18n="settings_currency_title">Валюта</h3>
-            <div class="form-grid">
-              <select id="currencySelect" class="select">
-                <option value="usd">USD</option>
-                <option value="eur">EUR</option>
-                <option value="rub">RUB</option>
-              </select>
-            </div>
-
-            <button class="btn-submit" id="settingsSaveBtn" type="button" data-i18n="settings_save">
-              Сохранить (демо)
-            </button>
+              <div>
+                <div class="label">Контакт (email / Telegram)</div>
+                <input class="input" type="text" name="contact" required placeholder="@team / you@startup.io" />
+              </div>
+              <button class="btn-submit" type="submit">Отправить идею (демо)</button>
+            </form>
           </div>
           <div class="card">
-            <h3 data-i18n="settings_integrations_title">Интеграции &amp; уведомления</h3>
-            <ul class="list">
-              <li>Подписки на обновления агентов и категорий.</li>
-              <li>Нотификации о статусе модерации ваших агентов.</li>
-              <li>Webhooks / Telegram / Slack в следующих релизах.</li>
-            </ul>
-            <p style="margin-top:6px;font-size:9px;color:#6b7280;" data-i18n="settings_hint">
-              Все переключатели сейчас работают как прототип и не отправляют реальные данные.
-            </p>
+            <h3 data-i18n="requests_partner_title">Партнёрство и улучшения платформы</h3>
+            <form id="requestPartnerForm" class="form-grid">
+              <div>
+                <div class="label">Формат</div>
+                <select class="select" name="type">
+                  <option>Интеграция / white-label</option>
+                  <option>Партнёрский маркетинг</option>
+                  <option>Фидбек по платформе</option>
+                  <option>Другое</option>
+                </select>
+              </div>
+              <div>
+                <div class="label">Сообщение</div>
+                <textarea class="textarea" name="message" required
+                  placeholder="Кратко опишите предложение или пожелание."></textarea>
+              </div>
+              <div>
+                <div class="label">Контакт</div>
+                <input class="input" type="text" name="contact" required placeholder="email / Telegram / сайт" />
+              </div>
+              <button class="btn-submit" type="submit">Отправить запрос (демо)</button>
+            </form>
           </div>
         </div>
       </div>

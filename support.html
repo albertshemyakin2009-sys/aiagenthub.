@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Настройки — AIAGENTHUB</title>
+  <title>Техническая поддержка — AIAGENTHUB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -19,9 +19,9 @@
       <a href="index.html" data-i18n="nav_home" class="">Главная</a>
       <a href="catalog.html" data-i18n="nav_catalog" class="">Каталог</a>
       <a href="about.html" data-i18n="nav_about" class="">О нас</a>
-      <a href="support.html" data-i18n="nav_support" class="">Поддержка</a>
+      <a href="support.html" data-i18n="nav_support" class="active">Поддержка</a>
       <a href="requests.html" data-i18n="nav_requests" class="">Запросы</a>
-      <a href="settings.html" data-i18n="nav_settings" class="active">Настройки</a>
+      <a href="settings.html" data-i18n="nav_settings" class="">Настройки</a>
       <a href="admin.html" data-i18n="nav_admin" class="">Админ</a>
     </nav>
     <div class="header-right">
@@ -41,9 +41,9 @@
       <a href="index.html" data-i18n="nav_home" class="">Главная</a>
       <a href="catalog.html" data-i18n="nav_catalog" class="">Каталог</a>
       <a href="about.html" data-i18n="nav_about" class="">О нас</a>
-      <a href="support.html" data-i18n="nav_support" class="">Поддержка</a>
+      <a href="support.html" data-i18n="nav_support" class="active">Поддержка</a>
       <a href="requests.html" data-i18n="nav_requests" class="">Запросы</a>
-      <a href="settings.html" data-i18n="nav_settings" class="active">Настройки</a>
+      <a href="settings.html" data-i18n="nav_settings" class="">Настройки</a>
       <a href="admin.html" data-i18n="nav_admin" class="">Админ</a>
   </nav>
 </header>
@@ -51,62 +51,48 @@
   <main>
     <section class="section fade-in">
       <div class="max-w">
-        <h1 class="page-title" data-i18n="settings_title">Настройки аккаунта (демо)</h1>
-        <p class="page-subtitle" data-i18n="settings_subtitle">
-          Здесь настраиваются базовые параметры профиля, тема интерфейса и предпочтения. В продакшене добавятся биллинг, API-ключи и интеграции.
+        <h1 class="page-title" data-i18n="support_title">Техническая поддержка</h1>
+        <p class="page-subtitle" data-i18n="support_subtitle">
+          Сообщите о багах, проблемах с доступом или работе агентов. Только технические вопросы — продуктовые идеи оставляйте в разделе запросов.
         </p>
         <div class="columns">
           <div class="card">
-            <h3 data-i18n="settings_profile_title">Профиль</h3>
-            <div class="form-grid">
+            <h3 data-i18n="support_form_title">Форма техподдержки</h3>
+            <form id="supportForm" class="form-grid">
               <div>
-                <div class="label" data-i18n="settings_name_label">Имя / команда</div>
-                <input class="input" type="text" placeholder="AIAGENTHUB Demo User" />
+                <div class="label" data-i18n="support_name_label">Имя / команда</div>
+                <input class="input" type="text" name="name" required placeholder="AI Studio / SaaS / Solo" />
               </div>
               <div>
                 <div class="label">Email</div>
-                <input class="input" type="email" placeholder="demo@aiagenthub.io" />
+                <input class="input" type="email" name="email" required placeholder="you@product.io" />
               </div>
-            </div>
-
-            <h3 style="margin-top:10px;" data-i18n="settings_language_title">Язык интерфейса</h3>
-            <div class="form-grid">
-              <select id="languageSelect" class="select">
-                <option value="ru">Русский</option>
-                <option value="en">English</option>
-              </select>
-            </div>
-
-            <h3 style="margin-top:10px;">Тема сайта</h3>
-            <div class="form-grid">
-              <select id="themeSelect" class="select">
-                <option value="original">Оригинальная</option>
-                <option value="light">Светлая</option>
-              </select>
-            </div>
-
-            <h3 style="margin-top:10px;" data-i18n="settings_currency_title">Валюта</h3>
-            <div class="form-grid">
-              <select id="currencySelect" class="select">
-                <option value="usd">USD</option>
-                <option value="eur">EUR</option>
-                <option value="rub">RUB</option>
-              </select>
-            </div>
-
-            <button class="btn-submit" id="settingsSaveBtn" type="button" data-i18n="settings_save">
-              Сохранить (демо)
-            </button>
+              <div>
+                <div class="label" data-i18n="support_topic_label">Тип проблемы</div>
+                <select class="select" name="topic">
+                  <option>Ошибка на сайте</option>
+                  <option>Не работает агент</option>
+                  <option>Проблема с доступом</option>
+                  <option>Другое (техническое)</option>
+                </select>
+              </div>
+              <div>
+                <div class="label" data-i18n="support_message_label">Описание</div>
+                <textarea class="textarea" name="message" required
+                  placeholder="Опишите шаги, как воспроизвести проблему."></textarea>
+              </div>
+              <button class="btn-submit" type="submit" data-i18n="support_submit">Отправить в поддержку (демо)</button>
+            </form>
           </div>
           <div class="card">
-            <h3 data-i18n="settings_integrations_title">Интеграции &amp; уведомления</h3>
+            <h3 data-i18n="support_faq_title">Частые вопросы (тех)</h3>
             <ul class="list">
-              <li>Подписки на обновления агентов и категорий.</li>
-              <li>Нотификации о статусе модерации ваших агентов.</li>
-              <li>Webhooks / Telegram / Slack в следующих релизах.</li>
+              <li>Нет доступа к сайту — проверьте VPN / браузер, затем напишите нам.</li>
+              <li>Агент не отвечает — укажите название агента и время инцидента.</li>
+              <li>Проблема с формами — приложите скриншот и текст ошибки.</li>
             </ul>
-            <p style="margin-top:6px;font-size:9px;color:#6b7280;" data-i18n="settings_hint">
-              Все переключатели сейчас работают как прототип и не отправляют реальные данные.
+            <p style="margin-top:6px;font-size:9px;color:#6b7280;">
+              В продакшене обращения улетают в ваш helpdesk или issue-трекер.
             </p>
           </div>
         </div>
