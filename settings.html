@@ -77,10 +77,11 @@
               </select>
             </div>
 
-            <h3 style="margin-top:10px;">Тема сайта</h3>
+            <h3 style="margin-top:10px;" data-i18n="settings_theme_title">Тема сайта</h3>
             <div class="form-grid">
               <select id="themeSelect" class="select">
                 <option value="original">Оригинальная</option>
+                <option value="blue">Тёмно-синяя</option>
                 <option value="light">Светлая</option>
               </select>
             </div>
@@ -94,9 +95,14 @@
               </select>
             </div>
 
-            <button class="btn-submit" id="settingsSaveBtn" type="button" data-i18n="settings_save">
-              Сохранить (демо)
-            </button>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
+              <button class="btn-submit" id="settingsSaveBtn" type="button" data-i18n="settings_save">
+                Сохранить (демо)
+              </button>
+              <button class="btn-ghost" id="settingsResetBtn" type="button" data-i18n="settings_reset">
+                Сбросить настройки
+              </button>
+            </div>
           </div>
           <div class="card">
             <h3 data-i18n="settings_integrations_title">Интеграции &amp; уведомления</h3>
